@@ -388,7 +388,6 @@ export default class Preloader extends EventEmitter {
   }
 
   async playIntro() {
-    // this.scaleFlag = true;
     await this.firstIntro();
     this.moveFlag = true;
     this.scrollOnceEvent = this.onScroll.bind(this);
@@ -409,6 +408,7 @@ export default class Preloader extends EventEmitter {
       sessionStorage.setItem("visited", true);
     }, 4000);
   }
+
 
   move() {
     if (this.device === "desktop") {
