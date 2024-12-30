@@ -342,7 +342,7 @@ export default class Controls {
               trigger: ".fourth",
               start: "top top",
               end: "bottom+=800 bottom",
-              scrub: 0.6,
+              scrub: 1.2,
               invalidateOnRefresh: true,
             },
           }).to(this.camera.orthographicCamera.position, {

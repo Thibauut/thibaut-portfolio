@@ -123,7 +123,7 @@ export default class Preloader extends EventEmitter {
             duration: 1.5,
             ease: "expo.out",
           })
-          
+
       }
       this.timeline
         .to(".intro-text .animatedis", {
@@ -388,7 +388,7 @@ export default class Preloader extends EventEmitter {
   }
 
   async playIntro() {
-    this.scaleFlag = true;
+    // this.scaleFlag = true;
     await this.firstIntro();
     this.moveFlag = true;
     this.scrollOnceEvent = this.onScroll.bind(this);
@@ -401,7 +401,7 @@ export default class Preloader extends EventEmitter {
 
   async playSecondIntro() {
     this.moveFlag = false;
-    // this.scaleFlag = true;
+    this.scaleFlag = true;
     await this.secondIntro();
     this.scaleFlag = false;
     setTimeout(() => {
